@@ -82,6 +82,17 @@ The extension is a single TypeScript file loaded directly by pi — no build ste
 
 Local development loop: edit `index.ts`, run `/reload` in a pi session, and exercise the tools.
 
+### Tests
+
+Unit tests cover both tools (`index.test.ts`, run with Node's built-in test runner). They run against a temp `PI_CODING_AGENT_DIR` with `fetch` stubbed — no real Pushover calls are made:
+
+```sh
+npm install
+npm test
+```
+
+The pi host packages are `devDependencies` for testing only; they remain peer dependencies at runtime and are provided by pi itself, never bundled.
+
 ## License
 
 Apache License 2.0 — see [LICENSE](LICENSE).
