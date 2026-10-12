@@ -14,7 +14,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v5
         with:
           # node strategy: bumps package.json, maintains CHANGELOG.md,
           # tags the release commit, and creates a GitHub Release.
