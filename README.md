@@ -93,6 +93,18 @@ npm test
 
 The pi host packages are `devDependencies` for testing only; they remain peer dependencies at runtime and are provided by pi itself, never bundled.
 
+## Releases
+
+Releases are automated with [release-please](https://github.com/googleapis/release-please) (`.github/workflows/release-please.yml`, `node` strategy). The flow:
+
+1. Merge a commit prefixed `feat:` (minor) or `fix:`/`deps:` (patch) to `main`.
+2. The bot opens a release PR — version bump in `package.json`, a `CHANGELOG.md` update, labeled `autorelease: pending`.
+3. Merge the release PR: the commit is tagged (`vX.Y.Z`) and a GitHub Release is created.
+
+Other prefixes (`chore:`, `docs:`, `test:`, `build:`) are not releasable and never open a release PR on their own. To force a specific version, add a `Release-As: x.y.z` footer to the commit body.
+
+Installers should pin a tag (`pi install git:github.com/raykrueger/pi-pushover@v1.0.0`); the latest tag is listed under [Releases](https://github.com/raykrueger/pi-pushover/releases).
+
 ## License
 
 Apache License 2.0 — see [LICENSE](LICENSE).
