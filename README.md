@@ -84,4 +84,4 @@ Local development loop: edit `index.ts`, run `/reload` in a pi session, and exer
 
 ## License
 
-TODO — choose and add a `LICENSE` before publishing.
+Apache License 2.0 — see [LICENSE](LICENSE).
