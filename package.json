@@ -4,12 +4,23 @@
   "license": "Apache-2.0",
   "private": true,
   "type": "module",
-  "keywords": ["pi-package"],
+  "scripts": {
+    "test": "node --test index.test.ts"
+  },
+  "keywords": [
+    "pi-package"
+  ],
   "pi": {
-    "extensions": ["./index.ts"]
+    "extensions": [
+      "./index.ts"
+    ]
   },
   "peerDependencies": {
     "@earendil-works/pi-ai": "*",
     "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^1.1.0",
+    "@earendil-works/pi-coding-agent": "^1.1.0"
   }
 }
