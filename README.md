@@ -15,10 +15,10 @@ No other dependencies — notifications go out with the built-in `fetch` against
 
 Prerequisite: the pi coding agent, and a free [Pushover](https://pushover.net) account with an app token and user key.
 
-Install from git (once the repo has a remote):
+Install from git:
 
 ```sh
-pi install git:github.com/<you>/pi-pushover@v1.0.0
+pi install git:github.com/raykrueger/pi-pushover@v1.0.0
 ```
 
 Or install this local checkout directly:
